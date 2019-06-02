@@ -12,23 +12,26 @@
 	<string>    dispatch_group_t group = dispatch_group_create();
     dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
         //并行操作 1
+        &lt;#code#&gt;
         
     });
     dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
         //并行操作 2
+        &lt;#code#&gt;
     });
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
         //同步操作
+        &lt;#code#&gt;
     });</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>F69A784A-3BC3-4A50-B6C1-A4E53D901F5A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>同步并行</string>
+	<string>并行同步</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

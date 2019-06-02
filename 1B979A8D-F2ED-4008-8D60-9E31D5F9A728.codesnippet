@@ -3,30 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>asyncgcd</string>
+	<string>__weak self</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string> dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //网络请求
-        &lt;#code#&gt;
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            //主线程刷新UI
-            &lt;#code#&gt;
-        });
-    });</string>
+	<string>__weak __typeof(self) &lt;#weakSelf#&gt; = self;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>CA66A963-48FD-43F2-BA95-E723661C3D8C</string>
+	<string>1B979A8D-F2ED-4008-8D60-9E31D5F9A728</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>eclare weak reference to strong referencee</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>异步请求GCD</string>
+	<string>__weak self</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
