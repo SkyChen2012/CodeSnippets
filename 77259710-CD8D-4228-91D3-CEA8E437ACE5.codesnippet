@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>view router</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#import "&lt;#ViewRouter#&gt;.h"
+#import "&lt;#ViewController#&gt;.h"
+
+DeclareRoutableView(&lt;#ViewController#&gt;, &lt;#ViewRouter#&gt;)
+
+@implementation &lt;#ViewRouter#&gt;
+
+//app启动时，注册对应的模块和Router
+//不使用+load和+initialize方法，因为在Swift中已经不适用
++ (void)registerRoutableDestination {
+    [self registerView:[&lt;#ViewController#&gt; class]];
+    [self registerViewProtocol:ZIKRoutable(&lt;#Interface#&gt;)];
+    [self registerIdentifier:@"&lt;#ViewIdentifier#&gt;"];
+    
+}
+
+- (id&lt;ZIKRoutableView&gt;)destinationWithConfiguration:(ZIKViewRouteConfiguration *)configuration {
+    
+    &lt;#ViewController#&gt; *destination = [[&lt;#ViewController#&gt; alloc] init];
+    return destination;
+}
+
+
+- (void)prepareDestination:(id)destination configuration:(ZIKViewRouteConfiguration *)configuration{
+    
+}
+
++ (void)router:(nullable ZIKViewRouter *)router willPerformRouteOnDestination:(id)destination fromSource:(id)source {
+    NSLog(@"nrouter: (%@), ➡️ will perform route from source: (%@), destination: (%@)",router, source, destination);
+}
+
++ (void)router:(nullable ZIKViewRouter *)router didPerformRouteOnDestination:(id)destination fromSource:(id)source {
+    NSLog(@"nrouter: (%@), ✅ did perform route from source: (%@), destination: (%@) ",router, source, destination);
+}
+
++ (void)router:(nullable ZIKViewRouter *)router willRemoveRouteOnDestination:(id)destination fromSource:(id)source {
+    NSLog(@"nrouter: (%@), ⬅️ will remove route from source: (%@), destination: (%@) ",router, source, destination);
+}
+
++ (void)router:(nullable ZIKViewRouter *)router didRemoveRouteOnDestination:(id)destination fromSource:(id)source {
+    NSLog(@"nrouter: (%@), ❎ did remove route from source: (%@), destination: (%@) ",router, source, destination);
+}
+
+@end</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>77259710-CD8D-4228-91D3-CEA8E437ACE5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>View Router init</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
