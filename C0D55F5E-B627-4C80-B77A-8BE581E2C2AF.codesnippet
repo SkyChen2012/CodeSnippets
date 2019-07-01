@@ -6,7 +6,7 @@
 	<string>table view delegata/datasource</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>#pragma mark - UITableViewDataSource
@@ -20,11 +20,16 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:&lt;#reuseIdentifier#&gt; forIndexPath:&lt;#indexPath#&gt;];
+    NSString *CellIdentifier = [NSString stringWithFormat:@"&lt;#code#&gt;"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
-    [self configureCell:cell forRowAtIndexPath:indexPath];
+    // todo:
     
     return cell;
+    
 }
 
 - (void)configureCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -39,7 +44,7 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>C0D55F5E-B627-4C80-B77A-8BE581E2C2AF</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>UITableView Delegate/DataSource </string>
 	<key>IDECodeSnippetUserSnippet</key>

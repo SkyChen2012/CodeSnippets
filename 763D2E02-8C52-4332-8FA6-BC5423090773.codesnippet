@@ -14,7 +14,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self iniUI];
+    [self initData];
+    [self initUI];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -39,21 +40,25 @@
 }
 
 #pragma mark - UIView Delegate
-// UIViewDelegate  for example UITableViewDelegate UITableViewDataSource
 
 #pragma mark - Custom Delegate
 // mothods
 
 #pragma mark - Event Response
 
+#pragma mark - Public Methods
+
 #pragma mark - Private Methods
-// mothods
+- (void)initData {
+    
+}
+
+- (void)initUI {
+    
+}
 
 #pragma mark - getters and setters 
 
-- (void)iniUI {
-    
-}
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>763D2E02-8C52-4332-8FA6-BC5423090773</string>

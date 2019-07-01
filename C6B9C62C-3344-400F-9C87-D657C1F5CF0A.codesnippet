@@ -3,22 +3,55 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@property strong</string>
+	<string>view init</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, strong) &lt;#Object#&gt; *&lt;#obj#&gt;;</string>
+	<string>- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        
+        [self initData];
+        [self initView];
+    }
+    return self;
+}
+
+- (void)dealloc {
+    
+}
+
+#pragma mark - UIView Delegate
+
+#pragma mark - Custom Delegate
+// mothods
+
+#pragma mark - Event Response
+
+#pragma mark - Public Methods
+
+#pragma mark - Private Methods
+
+- (void)initData{
+    
+}
+
+- (void)initView{
+    
+}
+
+#pragma mark - getters and setters
+
+
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>AF9B5D24-C0C3-45CC-97BF-08418315D88B</string>
+	<string>C6B9C62C-3344-400F-9C87-D657C1F5CF0A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>declare strong property</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Strong Property</string>
+	<string>view init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
